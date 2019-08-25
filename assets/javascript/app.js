@@ -15,66 +15,50 @@ let wrongCount = 0;
 let rightCount = 0;
 
 const q1 = {
-    question : "Question 1",
-    answer1 : ["Answer 1", true],
-    answer2 : ["Answer 2", false],
-    answer3 : ["Answer 3", false]
+    question : "What is the Capital of Montana?",
+    answer1 : ["Helena", true],
+    answer2 : ["Butte", false],
+    answer3 : ["Cheyenne", false]
 }
 const q2 = {
-    question : "Question 2",
-    answer1 : ["Answer 1", true],
-    answer2 : ["Answer 2", false],
-    answer3 : ["Answer 3", false]
+    question : "Who did Miley Cyrus first gain fame for portraying?",
+    answer1 : ["Hannah Montana", true],
+    answer2 : ["Lizzie McGuire", false],
+    answer3 : ["Raven Symone", false]
 }
 const q3 = {
-    question : "Question 3",
-    answer1 : ["Answer 1", true],
-    answer2 : ["Answer 2", false],
-    answer3 : ["Answer 3", false]
+    question : "What rap group had a hit song titled Hannah Montana?",
+    answer1 : ["Migos", true],
+    answer2 : ["Young Money", false],
+    answer3 : ["Young Gunz", false]
 }
 const q4 = {
-    question : "Question 4",
-    answer1 : ["Answer 1", true],
-    answer2 : ["Answer 2", false],
-    answer3 : ["Answer 3", false]
+    question : "Before Dora the Explorer, what PBS tv show taught kids beginner spanish?",
+    answer1 : ["Amigos", true],
+    answer2 : ["Destinos", false],
+    answer3 : ["El Gato en Mis Pantalones", false]
 }
 const q5 = {
-    question : "Question 5",
-    answer1 : ["Answer 1", true],
-    answer2 : ["Answer 2", false],
-    answer3 : ["Answer 3", false]
+    question : "The Religious Society of Friends is better known by their nickname:",
+    answer1 : ["The Quakers", true],
+    answer2 : ["The Mennonites", false],
+    answer3 : ["The Mormons", false]
 }
 const q6 = {
-    question : "Question 6",
-    answer1 : ["Answer 1", true],
-    answer2 : ["Answer 2", false],
-    answer3 : ["Answer 3", false]
+    question : "The 3D engine for this computer game was one of the first developed and became widely reused in the late 1990s:"
+    answer1 : ["Quake", true],
+    answer2 : ["Doom", false],
+    answer3 : ["Counterstrike", false]
 }
 const q7 = {
-    question : "Question 7",
-    answer1 : ["Answer 1", true],
-    answer2 : ["Answer 2", false],
-    answer3 : ["Answer 3", false]
+    question : "One of the largetst recorded earthquakes in the last century in the lower 48 states not including California occured near Hebgen Lake in this State ",
+    answer1 : ["Montana", true],
+    answer2 : ["Idaho", false],
+    answer3 : ["Tennessee", false]
 }
-const q8 = {
-    question : "Question 8",
-    answer1 : ["Answer 1", true],
-    answer2 : ["Answer 2", false],
-    answer3 : ["Answer 3", false]
+
 }
-const q9 = {
-    question : "Question 9",
-    answer1 : ["Answer 1", true],
-    answer2 : ["Answer 2", false],
-    answer3 : ["Answer 3", false]
-}
-const q10 = {
-    question : "Question 10",
-    answer1 : ["Answer 1", true],
-    answer2 : ["Answer 2", false],
-    answer3 : ["Answer 3", false]
-}
-const questionSet = [q1,q2,q3,q4,q5,q6,q7,q8,q9,q10];
+const questionSet = [q1,q2,q3,q4,q5,q6,q7];
 
 let welcome = "Click 'Play the Game' to start. You have "+ guessTime + " seconds to answer per question and there are "+ questionSet.length + " questions"
 
