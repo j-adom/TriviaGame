@@ -1,0 +1,13 @@
+#count-timer {
+    text-align: center;
+    width: max-content;
+    min-height: 2em;
+}
+
+p {
+    font-size: 12pt;
+}
+
+body{
+    text-align: center
+}

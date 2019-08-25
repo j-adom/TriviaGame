@@ -45,7 +45,7 @@ const q5 = {
     answer3 : ["The Mormons", false]
 }
 const q6 = {
-    question : "The 3D engine for this computer game was one of the first developed and became widely reused in the late 1990s:"
+    question : "The 3D engine for this computer game was one of the first developed and became widely reused in the late 1990s:",
     answer1 : ["Quake", true],
     answer2 : ["Doom", false],
     answer3 : ["Counterstrike", false]
@@ -57,7 +57,7 @@ const q7 = {
     answer3 : ["Tennessee", false]
 }
 
-}
+
 const questionSet = [q1,q2,q3,q4,q5,q6,q7];
 
 let welcome = "Click 'Play the Game' to start. You have "+ guessTime + " seconds to answer per question and there are "+ questionSet.length + " questions"
@@ -81,24 +81,18 @@ function countdown(){
         breakTime = 5
         questionCount++
         
-        $("#count-timer").html("Tally: "+ rightCount +" Right -" +wrongCount +" Wrong")
-        $("quiz-box").html("")
-        clearInterval(breakID);
-        breakID = setInterval(timedBreak, 1000);
-        nextQuestion()
+       gameStatus()
     }
 
 }
 //Update screen with current question
 function nextQuestion(){
-   if (questionCount === questionSet.length){
-        endGame();
-    }
-    else{
-            console.log(questionSet)
+   console.log(questionSet.length+ "&" + questionCount)
+    if (questionCount < questionSet.length){
+        console.log(questionSet)
             let currentQuestion = questionSet[questionCount] 
             console.log(currentQuestion)
-            let textQuestion = $("<p>").text(currentQuestion.question)
+            let textQuestion = $("<h2>").text(currentQuestion.question)
             console.log(currentQuestion.question)
             let textAns1 = $("<div>").text(currentQuestion.answer1[0])
                 .addClass("btn btn-secondary btn-lg btn-block")       
@@ -138,12 +132,13 @@ function nextQuestion(){
                 console.log(rightCount + " " + wrongCount)
                 guessTime = 10;
                 breakTime = 5
+                gameStatus();;
                 
-                
-               
             })
-
-            
+       
+    }
+    else{
+        endGame();
         }
 
     }
@@ -172,10 +167,10 @@ function endGame(){
 // Shows current score between questions
 function gameStatus(){
     questionCount++
-    $("#count-timer").html("Tally: "+ rightCount +" Right -" +wrongCount +" Wrong")
+    $("#count-timer").html("<h2>Tally: "+ rightCount +" Right -" +wrongCount +" Wrong</h2>")
     $("quiz-box").html("")
     clearInterval(breakID);
-    breakID = setInterval(timedBreak, 1000);
+    breakID = setTimeout(timedBreak, breakTime * 1000);
     nextQuestion()
 }
 
@@ -189,7 +184,6 @@ function timedBreak(){
 gameIntro();   
 
 $(document).on("click", "#play-button", function(){
-    $("#count-timer").text("")
     
     nextQuestion();
     })
